@@ -1,6 +1,5 @@
 package lw01.prelab;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         List<PrintJob> jobs = new ArrayList<>();
 
-        Scanner scanner = new Scanner(new File("jobs.txt"));
+        Scanner scanner = new Scanner(Main.class.getResourceAsStream("Jobs.txt"));
         while (scanner.hasNext()) {
             String type = scanner.next();
             String id = scanner.next();
