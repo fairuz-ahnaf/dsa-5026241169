@@ -15,7 +15,6 @@ public class Main {
                 int days = scanner.nextInt();
                 units[i] = scanner.nextInt();
 
-                // Pemetaan tipe -> objek konkret (hanya saat membuat objek)
                 switch (type) {
                     case "LAPTOP":
                         rentals[i] = new LaptopRental(id, days);
@@ -27,9 +26,7 @@ public class Main {
                         throw new IllegalArgumentException("Unknown type: " + type);
                 }
             }
-
-            // Satu loop lewat referensi Rental: polimorfisme runtime,
-            // tanpa instanceof / cast / kondisi nama tipe.
+            
             for (int i = 0; i < n; i++) {
                 Rental r = rentals[i];
                 System.out.println(r.getId() + " | " + r.label() + " | " + r.calculateCharge(units[i]));

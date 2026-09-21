@@ -23,7 +23,6 @@ public abstract class Rental implements Chargeable {
     @Override
     public abstract int calculateCharge();
 
-    // Overload: dipakai bersama oleh semua subclass, tidak di-override.
     public int calculateCharge(int units) {
         if (units <= 0) {
             throw new IllegalArgumentException("units must be positive");
