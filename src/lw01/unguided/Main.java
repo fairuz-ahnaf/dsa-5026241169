@@ -1,7 +1,5 @@
 package lw01.unguided;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
@@ -36,8 +34,6 @@ public class Main {
                 Rental r = rentals[i];
                 System.out.println(r.getId() + " | " + r.label() + " | " + r.calculateCharge(units[i]));
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("File rentals.txt tidak ditemukan.");
         }
     }
 }
